@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sectionA">
+            <div class="box">
+                <img src="pictures/logo.png" class="logo" alt="">
+                <span class="titulo">Creative Design Code</span>
+            </div>
+            <div class="box2">
+                <div class="subBox1">
+                    <div class="line"></div>
+                    <div class="circle" id="circle1"></div>
+                    <div class="circle" id="circle2"></div>
+                    <div class="circle" id="circle3"></div>
+                    <div class="circle" id="circle4"></div>
+                </div>
+                <div class="subBox2">
+                    <span class="title activeTitle" id="section1">Introduction</span>
+                    <span class="title" id="section2">Administrative</span>
+                    <span class="title" id="section3">Human Resources</span>
+                    <span class="title" id="section4">System Departament</span>
+                </div>
+            </div>
+        </div>
+        <div class="sectionB">
+            <div class="content" id="content">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+<script>
+        $('#content').stop(true);
+        $.ajax({
+            url: "seccionA.html",
+            success: function(data){
+                $('#content').html(data);
+            }
+        })
+        $("#section1").addClass("activeTitle");
+        $("#section1").removeClass("title");
+        $("#circle1").css({"background-color":"red"});
+</script>
+</html>
