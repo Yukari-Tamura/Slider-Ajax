@@ -23,6 +23,6 @@
          var peticion = false;
     fetch(`https://srienlinea.sri.gob.ec/sri-catastro-sujeto-servicio-internet/rest/ConsolidadoContribuyente/existePorNumeroRuc?numeroRuc=1756478245001`).then(response => {
      response.json() 
-    }).then(data =>  JSON.stringify(data));
+    }).then(data =>  console.log(data));
 </script>
 </html>
